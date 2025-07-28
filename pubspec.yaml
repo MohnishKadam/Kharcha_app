@@ -1,0 +1,65 @@
+name: kharcha
+description: A smart expense and debt-tracking app inspired by Splitwise
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State Management
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+  
+  # UI & Design
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.1.0
+  flutter_animate: ^4.5.0
+  shimmer: ^3.0.0
+  
+  # Charts & Visualization
+  fl_chart: ^0.66.0
+  
+  # Utilities
+  intl: ^0.19.0
+  uuid: ^4.3.3
+  shared_preferences: ^2.2.2
+  
+  # AI & Chat
+  google_generative_ai: ^0.3.1
+  http: ^1.1.0
+  dash_chat_2: ^0.0.20
+  
+  # Navigation
+  go_router: ^13.2.0
+  
+  # Icons
+  phosphor_flutter: ^2.0.1
+  
+  # Date/Time
+  calendar_date_picker2: ^0.5.3
+  
+  # JSON & Serialization
+  json_annotation: ^4.8.1
+  freezed_annotation: ^2.4.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  
+  # Code Generation
+  build_runner: ^2.4.7
+  json_serializable: ^6.7.1
+  freezed: ^2.4.7
+  riverpod_generator: ^2.3.9
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/ 
