@@ -34,14 +34,14 @@ class BudgetProgressWidget extends ConsumerWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
+                  const Row(
                     children: [
                       Icon(
                         Icons.pie_chart,
                         color: AppColors.accent,
                         size: 20,
                       ),
-                      const SizedBox(width: AppSpacing.sm),
+                      SizedBox(width: AppSpacing.sm),
                       Text(
                         'Budget Progress',
                         style: AppTypography.headline,
@@ -60,11 +60,11 @@ class BudgetProgressWidget extends ConsumerWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: AppSpacing.md),
+              SizedBox(height: AppSpacing.md),
 
               // Budget summary
               _buildBudgetSummary(progressList),
-              const SizedBox(height: AppSpacing.lg),
+              SizedBox(height: AppSpacing.lg),
 
               // Individual category progress
               ...progressList.take(4).map((progress) {
@@ -76,7 +76,7 @@ class BudgetProgressWidget extends ConsumerWidget {
               }),
 
               if (progressList.length > 4) ...[
-                const SizedBox(height: AppSpacing.sm),
+                SizedBox(height: AppSpacing.sm),
                 TextButton(
                   onPressed: () => context.push('/budget-progress'),
                   child: Text(
@@ -106,14 +106,14 @@ class BudgetProgressWidget extends ConsumerWidget {
       ),
       child: Column(
         children: [
-          Row(
+          const Row(
             children: [
               Icon(
                 Icons.psychology,
                 color: AppColors.accent,
                 size: 20,
               ),
-              const SizedBox(width: AppSpacing.sm),
+              SizedBox(width: AppSpacing.sm),
               Text(
                 'Smart Budget Recommendations',
                 style: AppTypography.headline,
@@ -132,7 +132,7 @@ class BudgetProgressWidget extends ConsumerWidget {
             ),
             child: Column(
               children: [
-                Icon(
+                const Icon(
                   Icons.lightbulb_outline,
                   color: AppColors.accent,
                   size: 32,
@@ -392,7 +392,7 @@ class BudgetProgressWidget extends ConsumerWidget {
       ),
       child: Column(
         children: [
-          Icon(
+          const Icon(
             Icons.error_outline,
             color: AppColors.error,
             size: 32,

@@ -107,7 +107,7 @@ class _SuggestedBudgetScreenState extends ConsumerState<SuggestedBudgetScreen> {
         children: [
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.psychology,
                 color: Colors.white,
                 size: 28,
@@ -221,7 +221,7 @@ class _SuggestedBudgetScreenState extends ConsumerState<SuggestedBudgetScreen> {
                     color: isSelected ? AppColors.accent : Colors.transparent,
                   ),
                   child: isSelected
-                      ? Icon(
+                      ? const Icon(
                           Icons.check,
                           size: 16,
                           color: Colors.white,
@@ -362,7 +362,7 @@ class _SuggestedBudgetScreenState extends ConsumerState<SuggestedBudgetScreen> {
           TextField(
             controller: controller,
             keyboardType: TextInputType.number,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               hintText: 'Enter budget amount',
               prefixText: '₹',
               suffixText: '/month',

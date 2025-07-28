@@ -48,7 +48,7 @@ class HomeScreen extends ConsumerWidget {
                         color: AppColors.secondaryText,
                       ),
                     ),
-                    Text(
+                    const Text(
                       'MOHNISH',
                       style: AppTypography.title3,
                     ),
@@ -57,7 +57,7 @@ class HomeScreen extends ConsumerWidget {
               ),
               actions: [
                 IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.psychology,
                     color: AppColors.accent,
                   ),
@@ -65,7 +65,7 @@ class HomeScreen extends ConsumerWidget {
                   tooltip: 'Chat with AI',
                 ),
                 IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.smart_toy,
                     color: AppColors.accent,
                   ),
@@ -103,15 +103,9 @@ class HomeScreen extends ConsumerWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => showDialog(
-          context: context,
-          builder: (context) => const QuickAddExpenseDialog(),
-        ),
+        onPressed: () => _showQuickAddExpenseDialog(context, ref),
         backgroundColor: AppColors.accent,
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
+        child: const Icon(Icons.add, color: Colors.white),
       ),
     );
   }
@@ -203,5 +197,12 @@ class HomeScreen extends ConsumerWidget {
     if (hour < 12) return 'morning';
     if (hour < 17) return 'afternoon';
     return 'evening';
+  }
+
+  void _showQuickAddExpenseDialog(BuildContext context, WidgetRef ref) {
+    showDialog(
+      context: context,
+      builder: (context) => const QuickAddExpenseDialog(),
+    );
   }
 }

@@ -20,11 +20,11 @@ void main() {
   );
 }
 
-class KharchaApp extends StatelessWidget {
+class KharchaApp extends ConsumerWidget {
   const KharchaApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp.router(
       title: 'Kharcha - Smart Expense Tracker',
       theme: AppTheme.light,

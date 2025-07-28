@@ -12,7 +12,7 @@ class QuickActionsSection extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Quick Actions',
           style: AppTypography.headline,
         ),

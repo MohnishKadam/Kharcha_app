@@ -21,15 +21,15 @@ class SmartInsightsScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Row(
+        title: const Row(
           children: [
-            const Icon(
+            Icon(
               Icons.insights,
               color: AppColors.accent,
               size: 24,
             ),
-            const SizedBox(width: AppSpacing.sm),
-            const Text('Smart Insights'),
+            SizedBox(width: AppSpacing.sm),
+            Text('Smart Insights'),
           ],
         ),
         leading: IconButton(
@@ -86,7 +86,7 @@ class SmartInsightsScreen extends ConsumerWidget {
         children: [
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.trending_up,
                 color: Colors.white,
                 size: 24,
@@ -157,7 +157,7 @@ class SmartInsightsScreen extends ConsumerWidget {
           LinearProgressIndicator(
             value: now.day / daysInMonth,
             backgroundColor: Colors.white.withValues(alpha: 0.3),
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+            valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
           ),
           const SizedBox(height: AppSpacing.sm),
           Text(
@@ -188,7 +188,7 @@ class SmartInsightsScreen extends ConsumerWidget {
         children: [
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.category,
                 color: AppColors.accent,
                 size: 20,
@@ -264,7 +264,7 @@ class SmartInsightsScreen extends ConsumerWidget {
                 ],
               ),
             );
-          }).toList(),
+          }),
         ],
       ),
     );
@@ -293,7 +293,7 @@ class SmartInsightsScreen extends ConsumerWidget {
         children: [
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.analytics,
                 color: AppColors.accent,
                 size: 20,
@@ -392,7 +392,7 @@ class SmartInsightsScreen extends ConsumerWidget {
         children: [
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.lightbulb,
                 color: AppColors.accent,
                 size: 20,
@@ -407,27 +407,25 @@ class SmartInsightsScreen extends ConsumerWidget {
             ],
           ),
           const SizedBox(height: AppSpacing.md),
-          ...recommendations
-              .map((rec) => Padding(
-                    padding: const EdgeInsets.only(bottom: AppSpacing.md),
-                    child: Row(
-                      children: [
-                        Icon(
-                          rec['icon'],
-                          color: rec['color'],
-                          size: 16,
-                        ),
-                        const SizedBox(width: AppSpacing.sm),
-                        Expanded(
-                          child: Text(
-                            rec['message'],
-                            style: AppTypography.callout,
-                          ),
-                        ),
-                      ],
+          ...recommendations.map((rec) => Padding(
+                padding: const EdgeInsets.only(bottom: AppSpacing.md),
+                child: Row(
+                  children: [
+                    Icon(
+                      rec['icon'],
+                      color: rec['color'],
+                      size: 16,
                     ),
-                  ))
-              .toList(),
+                    const SizedBox(width: AppSpacing.sm),
+                    Expanded(
+                      child: Text(
+                        rec['message'],
+                        style: AppTypography.callout,
+                      ),
+                    ),
+                  ],
+                ),
+              )),
         ],
       ),
     );

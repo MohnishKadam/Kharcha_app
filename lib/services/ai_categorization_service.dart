@@ -1,5 +1,3 @@
-import '../models/expense_category.dart';
-
 /// AI-powered expense categorization service
 /// Uses keyword matching to automatically categorize expenses
 class AiCategorizationService {

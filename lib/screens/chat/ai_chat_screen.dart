@@ -67,7 +67,7 @@ class _AiChatScreenState extends ConsumerState<AiChatScreen> {
                 ),
                 borderRadius: BorderRadius.circular(18),
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.psychology,
                 color: Colors.white,
                 size: 20,
@@ -109,28 +109,28 @@ class _AiChatScreenState extends ConsumerState<AiChatScreen> {
           PopupMenuButton<String>(
             onSelected: _handleMenuAction,
             itemBuilder: (context) => [
-              PopupMenuItem(
+              const PopupMenuItem(
                 value: 'clear',
                 child: Row(
                   children: [
                     Icon(Icons.clear_all, size: 18),
-                    const SizedBox(width: AppSpacing.sm),
+                    SizedBox(width: AppSpacing.sm),
                     Text('Clear Chat'),
                   ],
                 ),
               ),
-              PopupMenuItem(
+              const PopupMenuItem(
                 value: 'refresh',
                 child: Row(
                   children: [
                     Icon(Icons.refresh, size: 18),
-                    const SizedBox(width: AppSpacing.sm),
+                    SizedBox(width: AppSpacing.sm),
                     Text('Refresh Context'),
                   ],
                 ),
               ),
             ],
-            icon: Icon(Icons.more_vert),
+            icon: const Icon(Icons.more_vert),
           ),
         ],
       ),
@@ -216,7 +216,7 @@ class _AiChatScreenState extends ConsumerState<AiChatScreen> {
               ),
               child: Column(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.api,
                     size: 64,
                     color: AppColors.warning,
@@ -266,7 +266,7 @@ class _AiChatScreenState extends ConsumerState<AiChatScreen> {
                 ),
                 borderRadius: BorderRadius.circular(60),
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.psychology,
                 color: Colors.white,
                 size: 48,
@@ -420,7 +420,7 @@ class _AiChatScreenState extends ConsumerState<AiChatScreen> {
                   color: AppColors.accent.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(AppBorderRadius.sm),
                 ),
-                child: Icon(
+                child: const Icon(
                   Icons.keyboard_arrow_up,
                   size: 16,
                   color: AppColors.accent,
@@ -454,7 +454,7 @@ class _AiChatScreenState extends ConsumerState<AiChatScreen> {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(
+            const Icon(
               Icons.error_outline,
               color: AppColors.error,
               size: 16,
@@ -477,7 +477,7 @@ class _AiChatScreenState extends ConsumerState<AiChatScreen> {
       return Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(
+          const SizedBox(
             width: 20,
             height: 20,
             child: CircularProgressIndicator(
@@ -510,7 +510,7 @@ class _AiChatScreenState extends ConsumerState<AiChatScreen> {
           color: AppColors.accent,
           borderRadius: BorderRadius.circular(AppBorderRadius.md),
         ),
-        child: Icon(
+        child: const Icon(
           Icons.send,
           color: Colors.white,
           size: 20,
@@ -565,8 +565,8 @@ class _AiChatScreenState extends ConsumerState<AiChatScreen> {
     await clearChat();
 
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: const Text('Chat cleared'),
+      const SnackBar(
+        content: Text('Chat cleared'),
         backgroundColor: AppColors.success,
       ),
     );
@@ -577,8 +577,8 @@ class _AiChatScreenState extends ConsumerState<AiChatScreen> {
     await refreshContext();
 
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: const Text('Context refreshed with latest expense data'),
+      const SnackBar(
+        content: Text('Context refreshed with latest expense data'),
         backgroundColor: AppColors.success,
       ),
     );

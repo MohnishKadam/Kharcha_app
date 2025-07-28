@@ -119,7 +119,7 @@ USER'S FINANCIAL DATA:
 
     if (categorySpending != null && categorySpending.isNotEmpty) {
       context += '\nCATEGORY-WISE SPENDING THIS MONTH:\n';
-      categorySpending.entries.forEach((entry) {
+      for (var entry in categorySpending.entries) {
         final categoryName = categories
                 ?.firstWhere(
                   (cat) => cat.id == entry.key,
@@ -132,7 +132,7 @@ USER'S FINANCIAL DATA:
                 .name ??
             entry.key;
         context += '- $categoryName: ₹${entry.value.toStringAsFixed(0)}\n';
-      });
+      }
     }
 
     if (userExpenses != null && userExpenses.isNotEmpty) {
@@ -150,7 +150,7 @@ USER'S FINANCIAL DATA:
                 .name ??
             expense.categoryId;
         context +=
-            '- ${expense.description} (${categoryName}): ₹${expense.amount.toStringAsFixed(0)} on ${expense.date.toString().split(' ')[0]}\n';
+            '- ${expense.description} ($categoryName): ₹${expense.amount.toStringAsFixed(0)} on ${expense.date.toString().split(' ')[0]}\n';
       });
     }
 

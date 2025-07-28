@@ -33,14 +33,14 @@ class RecentExpensesCard extends ConsumerWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              const Row(
                 children: [
                   Icon(
                     Icons.access_time,
                     color: AppColors.accent,
                     size: 20,
                   ),
-                  const SizedBox(width: AppSpacing.sm),
+                  SizedBox(width: AppSpacing.sm),
                   Text(
                     'Recent Expenses',
                     style: AppTypography.headline,

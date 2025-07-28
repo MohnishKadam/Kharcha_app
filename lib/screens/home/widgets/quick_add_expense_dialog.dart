@@ -34,8 +34,6 @@ class _QuickAddExpenseDialogState extends ConsumerState<QuickAddExpenseDialog> {
 
   @override
   Widget build(BuildContext context) {
-    final categories = ref.watch(categoriesProvider);
-
     return Dialog(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(AppBorderRadius.lg),
@@ -56,7 +54,7 @@ class _QuickAddExpenseDialogState extends ConsumerState<QuickAddExpenseDialog> {
                     color: AppColors.accent.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(AppBorderRadius.md),
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.add,
                     color: AppColors.accent,
                     size: 24,

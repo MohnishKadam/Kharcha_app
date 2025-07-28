@@ -45,7 +45,7 @@ class AiCategorySuggestions extends ConsumerWidget {
         children: [
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.smart_toy,
                 size: 16,
                 color: AppColors.accent,
@@ -165,7 +165,7 @@ class AiCategorySuggestions extends ConsumerWidget {
                 borderRadius: BorderRadius.circular(AppBorderRadius.sm),
               ),
               child: Text(
-                '${confidence}%',
+                '$confidence%',
                 style: AppTypography.caption2.copyWith(
                   color: _getConfidenceColor(confidence),
                   fontWeight: FontWeight.w600,
@@ -223,7 +223,7 @@ class AiCategoryIndicator extends ConsumerWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(
+          const Icon(
             Icons.smart_toy,
             size: 10,
             color: AppColors.accent,
